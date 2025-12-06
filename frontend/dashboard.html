@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - CollabX Lite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f4ff;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        .top-buttons {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 10px 16px;
+            background: #0066ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-right: 10px;
+        }
+
+        .btn:hover {
+            background: #004ccd;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px #00000020;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card button {
+            padding: 8px 12px;
+            background: #48bb78;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background: #3da66b;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2>Dashboard</h2>
+    <p>Welcome to CollabX Lite (Frontend Demo)</p>
+
+    <div class="top-buttons">
+        <a href="submit.html" class="btn">Submit Challenge</a>
+        <a href="browse.html" class="btn">Browse Challenges</a>
+        <a href="publish.html" class="btn" style="background:#ff8800">Published Outcomes</a>
+    </div>
+
+    <h3>Your Ideas</h3>
+    <div class="cards">
+        <!-- Dummy card -->
+        <div class="card">
+            <h3>My Smart Water Project</h3>
+            <p>Idea description appears here.</p>
+            <button onclick="alert('Open Workspace (frontend only)')">Open Workspace</button>
+        </div>
+    </div>
+
+    <h3 style="margin-top: 30px;">All Challenges</h3>
+    <div class="cards">
+        <!-- Dummy card -->
+        <div class="card">
+            <h3>Open Innovation Platform</h3>
+            <p>An idea to connect innovators.</p>
+            <button onclick="alert('Open Workspace (frontend only)')">Open Workspace</button>
+        </div>
+    </div>
+
+    <br>
+    <a href="index.html" class="btn" style="background:#e53e3e">Logout</a>
+
+</body>
+</html>

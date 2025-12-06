@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Published Outcomes - CollabX Lite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f2f7ff;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px #00000020;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .btn-view {
+            padding: 8px 12px;
+            background: #0066ff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-right: 8px;
+        }
+
+        .btn-view:hover {
+            background: #004ccd;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #e53e3e;
+            color: white;
+            border-radius: 6px;
+            margin-top: 25px;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Published Solutions</h2>
+
+    <div class="cards">
+
+        <!-- Dummy published outcome 1 -->
+        <div class="card">
+            <h3>Smart Water Monitoring System</h3>
+            <p>Team created an IoT water monitoring prototype.</p>
+            <button class="btn-view" onclick="alert('Viewing Prototype (frontend only)')">View</button>
+        </div>
+
+        <!-- Dummy published outcome 2 -->
+        <div class="card">
+            <h3>AI Traffic Analyzer</h3>
+            <p>AI-based real-time traffic prediction model.</p>
+            <button class="btn-view" onclick="alert('Viewing Prototype (frontend only)')">View</button>
+        </div>
+
+        <!-- Dummy published outcome 3 -->
+        <div class="card">
+            <h3>Skill Matching Platform</h3>
+            <p>Mini platform for student skill matchmaking.</p>
+            <button class="btn-view" onclick="alert('Viewing Prototype (frontend only)')">View</button>
+        </div>
+
+    </div>
+
+    <a href="dashboard.html" class="back-btn">← Back to Dashboard</a>
+
+</body>
+</html>

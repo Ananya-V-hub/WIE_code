@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1765000854964,
+    "title": "Smart IoT Theft Detector",
+    "description": "A motion-triggered ESP32 security logging platform",
+    "requiredSkills": [
+      "iot",
+      "frontend",
+      "node"
+    ],
+    "postedByUserId": 1,
+    "createdAt": "2025-12-06T06:00:54.964Z"
+  }
+]

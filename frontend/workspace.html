@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Workspace - CollabX Lite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #eef3ff;
+        }
+
+        .topbar {
+            background: #0066ff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Chat Section */
+        .chat-box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 0px 10px #00000022;
+        }
+
+        .messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: #f9f9f9;
+        }
+
+        .msg {
+            background: #e1eaff;
+            padding: 8px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            width: fit-content;
+            max-width: 80%;
+        }
+
+        .chat-input {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .chat-input button {
+            padding: 10px 14px;
+            margin-left: 8px;
+            background: #0066ff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+        }
+
+        /* Task Section */
+        .task-box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            height: 500px;
+            box-shadow: 0px 0px 10px #00000022;
+        }
+
+        .task-input {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .task-input input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .task-input button {
+            padding: 10px 14px;
+            background: #48bb78;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            margin-left: 8px;
+        }
+
+        .task {
+            padding: 10px;
+            background: #f0f8ff;
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+
+        .progress {
+            margin-top: 15px;
+        }
+
+        .progress-bar {
+            height: 18px;
+            background: #0066ff;
+            width: 40%;
+            border-radius: 6px;
+        }
+
+        .back-btn {
+            display: block;
+            text-align: center;
+            margin: 20px;
+            background: #e53e3e;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+    </style>
+
+    <script>
+        function sendMsg() {
+            let msg = document.getElementById("chatMsg").value;
+            if (msg.trim() === "") return;
+
+            let box = document.getElementById("msgBox");
+            let div = document.createElement("div");
+            div.className = "msg";
+            div.innerText = msg;
+            box.appendChild(div);
+
+            document.getElementById("chatMsg").value = "";
+        }
+
+        function addTask() {
+            let task = document.getElementById("taskInput").value;
+            if (task.trim() === "") return;
+
+            let list = document.getElementById("taskList");
+            let div = document.createElement("div");
+            div.className = "task";
+            div.innerText = "• " + task;
+            list.appendChild(div);
+
+            document.getElementById("taskInput").value = "";
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="topbar">Workspace</div>
+
+    <div class="container">
+        
+        <!-- Chat Section -->
+        <div class="chat-box">
+            <h3>Team Chat</h3>
+
+            <div class="messages" id="msgBox">
+                <!-- Messages will appear here -->
+            </div>
+
+            <div class="chat-input">
+                <input id="chatMsg" placeholder="Type message...">
+                <button onclick="sendMsg()">Send</button>
+            </div>
+        </div>
+
+        <!-- Task Section -->
+        <div class="task-box">
+            <h3>Tasks</h3>
+
+            <div class="task-input">
+                <input id="taskInput" placeholder="New task...">
+                <button onclick="addTask()">Add</button>
+            </div>
+
+            <div id="taskList"></div>
+
+            <div class="progress">
+                <p>Progress:</p>
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <a href="dashboard.html" class="back-btn">← Back to Dashboard</a>
+
+</body>
+</html>

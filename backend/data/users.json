@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1764998237410,
+    "name": "Alice",
+    "email": "alice@mail.com",
+    "passwordHash": "$2b$10$Qd.987ws6hLeAYO5h2NlDOfHJo1qnu0aewZWI6Qziy9IYRuRuFaki",
+    "skills": [
+      "javascript",
+      "node",
+      "express"
+    ]
+  },
+  {
+    "id": 1765000564448,
+    "name": "Bob",
+    "email": "bob@mail.com",
+    "passwordHash": "$2b$10$hGCHhdGt1PvcFk0Fyn2w8uv3Nl5vBbDYQKngGOOrVq2XVKdpa3BWy",
+    "skills": [
+      "react",
+      "ui",
+      "node"
+    ]
+  },
+  {
+    "id": 1765008149370,
+    "name": "nagapriya173",
+    "email": "nagapriya173@gmail.com",
+    "passwordHash": "$2b$10$Nas9RlWSXD4wSex9h3bspO9NWdQtsEPBCufX2Dnu.p9liohcPbdnG",
+    "skills": [
+      "student"
+    ]
+  }
+]
